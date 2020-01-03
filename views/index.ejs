@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IRC - Emmanuel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" const="text/html;charset=UTF-8" />
+
+    <!-- CSS NECESSAIRE -->
+    <link href="http://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="style.css" >
+  </head>
+
+  <body>
+
+    <div id="divLogin"><!-- DIV CONNEXION -->
+      <form id="loginform">
+        <input type="text" id="username" autocomplete="off" placeholder="Enter your pseudo"/><input type="submit" value="Login" />
+      </form>
+    </div><!-- DIV CONNEXION -->
+
+    <div style="display:none;" class="sidebar"><!-- DIV SIDEBAR -->
+      <div class="head">
+        <p id="side-channels" class="active">Channel(s)</p>
+        <p id="side-users" class="non-active">User(s)</p>
+      </div>
+      <div style="display:none;" id="users"></div><!-- DIV UTILISATEURS CONNECTES -->
+      <div id="channels"></div><!-- DIV CHANNELS -->
+    </div><!-- DIV SIDEBAR -->
+
+    <div style="display:none;" class="content"><!-- DIV CONTENT -->
+      <div class="header">
+        <p id="logout"><img src="logout.png" width="20px" alt="Logout" /></p>
+        <input id="tokken" type="hidden" />
+      </div>
+
+      <div id="area-general" class="messages"></div>
+      <div class="controls">
+        <form id="textentry">
+          <input id="textbox" type="text" autocomplete="off" />
+          <button id="submit" type="submit">Send</button>
+        </form>
+      </div>
+    </div><!-- DIV CONTENT -->
+
+    <!-- SCRIPT JS NECESSAIRE -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/mustache.js"></script>
+    <script src="client.js"></script>
+  </body>
+</html>
