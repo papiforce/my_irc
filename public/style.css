@@ -1,0 +1,249 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background: #AFAFAF;
+}
+
+/* INDEX LOGIN */
+
+#divLogin {
+  height: 100%;
+  background: grey;
+  position: relative;
+}
+
+#loginform {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#loginform input {
+  font-size: 35px;
+}
+
+#loginform input:focus {
+  outline: none;
+}
+
+#loginform input[type="text"] {
+  padding-bottom: 5px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid black;
+  background: none;
+  text-align: center;
+}
+
+#loginform input[type="text"]::placeholder {
+  color: black;
+}
+
+#loginform input[type="submit"] {
+  margin-left: 10px;
+  padding: 5px;
+}
+
+/* FIN INDEX LOGIN */
+
+/* SIDEBAR */
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 300px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  align-items: stretch;
+}
+
+.sidebar p {
+  display: block;
+  color: black;
+  padding: 16px;
+}
+
+.sidebar p.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.sidebar p:hover {
+  cursor: pointer;
+}
+
+.sidebar p:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+.sidebar #users {
+  text-align: center;
+}
+
+.sidebar strong {
+  display: block;
+  padding: 16px;
+}
+
+.sidebar strong:hover {
+  cursor: pointer;
+}
+
+.sidebar .room-active {
+  background-color: #AFAFAF;
+  color: white;
+}
+
+.sidebar .room-active:hover {
+  cursor: default
+}
+
+#channels strong:hover:not(.room-active) {
+  background-color: grey;
+}
+
+/* FIN SIDEBAR */
+
+/* PAGE CONTENT */
+
+.content {
+  margin-left: 300px;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.header p {
+  background: #f1f1f1;
+  padding: 5px 5px 1px 5px;
+  border: 1px solid black;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.header p:hover {
+  cursor: pointer;
+}
+
+.messages {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  border: 1px solid black;
+  background-color: #f1f1f1;
+}
+
+.messages .administrator {
+  background-color: #4CAF50;
+  margin: 5px 10px 10px 5px;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+.messages .notif {
+  background-color: #4CAF50;
+  margin: 5px 10px 10px 5px;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+.messages .notif2 {
+  background-color: #f44336;
+  margin: 5px 10px 10px 5px;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+.messages .message {
+  border-bottom: 1px solid black;
+  padding: 10px;
+  margin: 0 10px 10px 10px;
+}
+
+.messages-hide {
+  display: none;
+}
+
+.messages::-webkit-scrollbar {
+  width: 10px;
+}
+
+.messages::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.messages::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.messages::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+#area-general {
+  border: 1px solid black;
+  background-color: #f1f1f1;
+}
+
+.controls {
+  padding-top: 10px;
+  flex-direction: stretch;
+}
+
+.controls input[type="text"] {
+  width: 85%;
+  height: 30px;
+  margin-bottom: 15px;
+}
+
+.controls button {
+  width: 14%;
+  height: 30px;
+  box-sizing: content-box;
+}
+
+
+/* FIN PAGE CONTENT */
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
